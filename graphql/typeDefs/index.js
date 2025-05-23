@@ -56,9 +56,10 @@ const typeDefs = gql`
         publication_code: ID
     }
     
-    type Sale_Customer {
+    type SaleCustomers {
         sale_code: ID
         customer_code: ID
+    
     }
 
     type PoetPoem {
@@ -69,14 +70,6 @@ const typeDefs = gql`
         poem_title: String
     }
 
-    type SaleCustomer {
-        sale_code: ID
-        date: String
-        amount: Float
-        customer_code: ID
-        customer_name: String
-        customer_surname: String
-    }
 
     type PublicationPoem {
         publication_code: ID
@@ -99,7 +92,7 @@ const typeDefs = gql`
         getCustomer: [Customer]
         getPoemPublication: [Poem_Publication]
         getSalePublication: [Sale_Publication]
-        getSaleCustomers: [Sale_Customer]
+        getSaleCustomers: [SaleCustomers]
         getAllPoets: [Poet]
         getPoetPoems: [PoetPoem]
         getPublicationPoems: [PublicationPoem]
